@@ -1,0 +1,16 @@
+{
+  "name": "rxjs-demo",
+  "version": "1.0.0",
+  "description": "Demo for RXJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "rxjs",
+    "observables-hell"
+  ],
+  "author": "@barryrowe",
+  "license": "ISC"
+}
