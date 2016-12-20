@@ -1,4 +1,8 @@
 let rx = require("rxjs");
+let utils = require("./utils.js");
+
+utils.printHeader("Previously Emitted Values w/ Behavior Subject");
+
 let Observable = rx.Observable;
 let Subject = rx.Subject;
 let BehaviorSubject = rx.BehaviorSubject;
@@ -16,5 +20,5 @@ setInterval(() => delayed5sec.next(++d5Count), 5000);
 let behaviorImmediate = new BehaviorSubject("The Initial Value!");
 behaviorImmediate.subscribe((val) => console.log("Behavior Result", val));
 Observable.zip(behaviorImmediate, delayed2sec, delayed5sec)
-          .subscribe((results) => console.log(results));
+          .subscribe((results) => console.log("ZIP RESULT :===> ", results));
 behaviorImmediate.next("ANOTHER VALUE!!");

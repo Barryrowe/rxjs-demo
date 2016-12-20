@@ -1,4 +1,8 @@
 let rx = require("rxjs");
+let utils = require("./utils.js");
+
+utils.printHeader("The Zip operator, plus timing of Emissions");
+
 let Observable = rx.Observable;
 let Subject = rx.Subject;
 

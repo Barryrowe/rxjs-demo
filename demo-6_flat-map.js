@@ -1,4 +1,8 @@
 let rx = require("rxjs");
+let utils = require("./utils.js");
+
+utils.printHeader("Folding in Async operations with FlatMap");
+
 let Observable = rx.Observable;
 let Subject = rx.Subject;
 
@@ -14,11 +18,11 @@ let fakeApiCall = (inputs) => {
 let apiTrigger = new Subject();
 
 apiTrigger.do((val) => console.log("Value Sent In: ", val))
-         .map((emittedValue) => `PRE_${emittedValue}_POST`)
+         .map((emittedValue) => `\$pre_${emittedValue}_post\$`)
          .do((val) => console.log("Value After Map: ", val))
          .flatMap((inputs) => Observable.fromPromise(fakeApiCall(inputs)),
                   (inputs, returnedData) => ({inputs, returnedData}))
-         .subscribe(({inputs, returnedData}) =>  console.log("Inputs: ", inputs, "API Return:", returnedData));
+         .subscribe(({inputs, returnedData}) =>  console.log("\tInputs: ", inputs, "\n\tAPI Return:", returnedData));
 
 apiTrigger.next("tacosneverlie"); 
 
