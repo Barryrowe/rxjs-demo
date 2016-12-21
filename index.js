@@ -1,4 +1,4 @@
-let rx = require("rxjs");
+let rx = require("@reactivex/rxjs");
 let Observable = rx.Observable;
 ////let Subject = rx.Subject;
 //////let BehaviorSubject = rx.BehaviorSubject;

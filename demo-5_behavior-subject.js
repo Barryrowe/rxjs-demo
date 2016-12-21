@@ -1,4 +1,4 @@
-let rx = require("rxjs");
+let rx = require("@reactivex/rxjs");
 let utils = require("./utils.js");
 
 utils.printHeader("Previously Emitted Values w/ Behavior Subject");
