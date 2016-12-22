@@ -9,9 +9,7 @@ let Subject = rx.Subject;
 /* Flat Map Example */
 let fakeApiCall = (inputs) => {
   return new Promise((resolve, reject) => {
-       setTimeout(() => {
-           resolve(`Input has ${inputs.length} characters.`);
-      }, 2000);
+       setTimeout(() => resolve(`Input has ${inputs.length} characters.`), 2000);
     });
 };
 

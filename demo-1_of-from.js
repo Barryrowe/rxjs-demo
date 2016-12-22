@@ -3,7 +3,6 @@ let utils = require("./utils.js");
 
 utils.printHeader("Simple Observables: 'of' and 'from'");
 
-
 let Observable = rx.Observable;
 
 let of = Observable.of(['a', 'b', 'c']);
